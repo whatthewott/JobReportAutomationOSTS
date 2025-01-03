@@ -1,7 +1,7 @@
 function main(workbook: ExcelScript.Workbook) {
 	let selectedSheet = workbook.getActiveWorksheet();
 	// Set range K1 on selectedSheet
-	selectedSheet.getRange("K1").setFormula("=COUNTIF(A2:A250,\"<>\"&\"\")");
+	selectedSheet.getRange("K1").setFormula("=COUNTIF(A2:A500,\"<>\"&\"\")");
 	// Paste to range L1 on selectedSheet from range K1 on selectedSheet
 	selectedSheet.getRange("L1").copyFrom(selectedSheet.getRange("K1"), ExcelScript.RangeCopyType.values, false, false);
 	// Set range K1 on selectedSheet
